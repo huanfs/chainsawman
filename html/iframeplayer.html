@@ -11,7 +11,7 @@
             align-items:center;
             justify-content:center;
             height:100vh;
-            background-image:url('img/bg3.jpg');
+            background-image:url('../img/bg3.jpg');
             background-size:cover;
         }
         iframe{
@@ -24,22 +24,7 @@
     </style>
 </head>
 <body>
-    <nav>
-        <button onclick="mudaEp()">proximo</button>
-    </nav>
     <iframe src="ep/02.mp4">  
     </iframe>
-
-    <script>
-        let video=document.querySelector('iframe');
-        let SRC=video.src;
-        function mudaEp(){
-            if(SRC="ep/01.mp4"){
-                SRC="ep/02.mp4"
-            }if(SRC="ep/02.mp4"){
-                SRC="ep/03.mp4";
-            }
-        }
-    </script>
 </body>
 </html>
