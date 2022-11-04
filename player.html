@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player</title>
+    <style>
+        body{
+            display:flex;
+            justify-content:center;
+            background-image:url('img/bg3.jpg');
+            background-size:cover;
+            padding:5em;
+        }
+        button{
+            font:normal 10pt Arial;
+        }
+        video{
+            width:720px;
+            height:480px;
+            border-radius:10px;
+            background-color:rgba(255, 136, 0, 0.911);
+            box-shadow:5px 5px 20px rgba(0, 0, 0, 0.918);
+        }
+        #controle{
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
+            width:50px;
+            margin-right:.4em;
+        }
+        #controle button{
+            width:50px;
+            height:150px;
+            border-radius:5px;
+            border:none;
+            font:normal 13pt Arial;
+            background-color:orange;
+            color:#fff;
+        }
+        #controle button:hover{
+            background-color:red;
+            transition:0.5s;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav id="controle">
+        <button onclick="inicio()">Início</button>
+    </nav>
+    <!--CRIAR O PLAYER-->
+        <video src='' id="video" controls="controls" autoplay="autoplay">
+            erro o video não foi carregado!
+        </video>
+    
+    <script src="script.js"></script>
+</body>
+</html>

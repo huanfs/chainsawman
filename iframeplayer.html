@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe</title>
+    <style>
+        body{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            height:100vh;
+            background-image:url('img/bg3.jpg');
+            background-size:cover;
+        }
+        iframe{
+            width:720px;
+            height:480px;
+            border:none;
+            border-radius:5px;
+            box-shadow:3px 3px 15px black;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <button onclick="mudaEp()">proximo</button>
+    </nav>
+    <iframe src="ep/02.mp4">  
+    </iframe>
+
+    <script>
+        let video=document.querySelector('iframe');
+        let SRC=video.src;
+        function mudaEp(){
+            if(SRC="ep/01.mp4"){
+                SRC="ep/02.mp4"
+            }if(SRC="ep/02.mp4"){
+                SRC="ep/03.mp4";
+            }
+        }
+    </script>
+</body>
+</html>

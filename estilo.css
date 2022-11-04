@@ -1,0 +1,201 @@
+
+/*PRECISO DEFINIR UM TAMANHO RESPONSIVO PARA A TELA QUANDO ESTA DIMINUIR*/
+*{
+    margin:0;
+    padding:0;
+}
+
+
+
+
+.player{
+    text-decoration:none;
+}
+
+
+
+body{
+    display:grid;
+    grid-template-areas:"top top" "left right" "bot bot";
+    grid-template-columns:70vw 30vw;
+    grid-template-rows:11vh 79vh 10vh;
+    background-image:url('img/bg1.jpg');
+    background-size:cover;
+}
+nav{
+    position:sticky;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color:rgba(255, 0, 0, 0.911);
+    grid-area:top;
+    padding:1em;
+    /*box-shadow:0px 3px 5px rgba(255, 255, 0, 0.897);*/
+}
+nav #btn{
+    text-decoration:none;
+    color:rgb(250, 250, 48);
+    font-weight: bold;
+    font-family:Arial, sans-serif;
+    padding:1em;
+    border:1px solid rgb(250, 250, 48);
+    border-radius:5px;
+}
+nav #btn:hover{
+    color:rgba(255, 0, 0, 0.911);
+    background-color:rgb(250, 250, 48);
+    transition-duration:0.5s;
+}
+nav img{
+    width:7em;
+    height:4em;
+}
+section{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    /*width:800px;
+    height:500px;*/
+    gap:1em;
+    grid-area:left;
+    margin:0.5em 0;
+}
+section article{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-around;
+    height:160px;
+    width:250px;
+}
+section article:hover{
+    cursor:pointer;
+}
+article span{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:145px;
+    width:250px;
+    text-align:center;
+    background-color:rgba(0, 0, 0, 0.781);
+    color:#fff;
+    font:normal 16pt Arial;
+}
+article .img{
+    height:160px;
+    width:250px;
+    background-color:rgba(0, 0, 0, 0.781);
+}
+article img{
+    height:140px;
+    width:250px;
+}
+article p{
+    text-align:center;
+    font:normal 12pt Arial;
+    color:#fff;
+    padding:0.1em 0;
+    margin-top:-0.3em;
+    background-color:rgba(0, 0, 0, 0.856);
+}
+aside{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    padding:1em;
+    /*width:600px;*/
+    grid-area:right;
+    background-color:rgba(0, 0, 0, 0.719);
+}
+aside h2{
+    font:normal 18pt Arial;
+    color:#ffffff;
+    margin-bottom:0.5em;
+    text-decoration:underline;
+}
+aside p{
+    font:normal 14pt Arial;
+    text-align:justify;
+    color:#fff;
+}
+aside ol{
+    display:flex;
+    flex-direction:column;
+    margin-right:auto;
+    list-style-type:none;
+    font:italic 14pt Arial;
+    color:yellow;
+}
+ol span{
+    color:#fff;
+    font:normal 14pt Arial;;
+}
+ol li{
+    margin:1em 0;
+}
+footer{
+    grid-area:bot;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:rgba(255, 0, 0, 0.911);
+    font:italic 14pt Arial;
+    color:#fff;
+}
+
+
+@media screen and (max-width:900px){
+    body{
+        background-color:orange;
+        display:flex;
+        flex-direction:column;
+        background-image:url('img/bg2.jpg');
+    }
+    section{
+        margin:1em 0;
+    }
+    section article{
+        display:flex;
+        flex-wrap:wrap;
+        align-items:center;
+        justify-content:space-around;
+        height:80px;/*160*/
+        width:125px;/*250*/
+    }
+    article span{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        height:72px;/*145*/
+        width:125px;/*250*/
+        text-align:center;
+        background-color:rgba(0, 0, 0, 0.781);
+        color:#fff;
+        font:normal 16pt Arial;
+    }
+    article .img{
+        height:80px;/*160*/
+        width:125px;/*250*/
+        background-color:rgba(0, 0, 0, 0.781);
+    }
+    article img{
+        height:70px;/*140*/
+        width:125px;/*250*/
+    }
+    article p{
+        text-align:center;
+        font:normal 9pt Arial;
+        color:#fff;
+        padding:0.1em 0;
+        margin-top:-0.6em;
+        background-color:rgba(0, 0, 0, 0.856);
+    }
+    aside h2{
+        text-decoration:none;
+        color:rgb(255, 255, 44);
+    }
+}
