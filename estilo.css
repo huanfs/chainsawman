@@ -4,16 +4,6 @@
     margin:0;
     padding:0;
 }
-
-
-
-
-.player{
-    text-decoration:none;
-}
-
-
-
 body{
     display:grid;
     grid-template-areas:"top top" "left right" "bot bot";
@@ -146,7 +136,9 @@ footer{
     font:italic 14pt Arial;
     color:#fff;
 }
-
+.player{
+    text-decoration:none;
+}
 
 @media screen and (max-width:900px){
     body{
