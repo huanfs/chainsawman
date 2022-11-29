@@ -41,6 +41,8 @@ nav img{
     height:4em;
 }
 section{
+    overflow-y:scroll;
+    overflow-x:hidden;
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
@@ -50,6 +52,18 @@ section{
     gap:1em;
     grid-area:left;
     margin:0.5em 0;
+}
+/*personalização da barra de rolagem*/
+section::-webkit-scrollbar {
+    width: 8px;
+}
+section::-webkit-scrollbar-track-piece{
+    background:transparent;
+    border-radius:5px;
+}
+section::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background:rgba(255, 0, 0, 0.666);  
 }
 section article{
     display:flex;
@@ -147,6 +161,7 @@ footer{
         background-image:url('../img/bg2.jpg');
     }
     section{
+        overflow:hidden;
         margin:1em 0;
     }
     section article{
