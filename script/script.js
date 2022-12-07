@@ -1,30 +1,58 @@
-let play=document.getElementsByClassName('play');
-let video= document.getElementById('video');
-let janela;
-let botao1=document.getElementsByTagName('button')[0];
-function abrePlayer(){
-    janela=window.open('html/iframeplayer.html');
-}
-function inicio(){
-    janela=window.close();
-}
-/*abertuda no ep 2 de uma pagina com um
-player contruido de forma diferente*/
-function frame2(){
-    window.open('html/iframeplayer.html');
-}
-/*NOVA OPÇAO COM SWITCH CASE
-aqui abaixo ao clicar no episodio dispara uma função que entra em
-acao apos 3 segundos atribuindo um src ao video*/
-/*let play=document.getElementsByClassName('play');
-let video=document.getElementById('video');
-function frame2(){
-    window.open('html/iframeplayer.html');
-    setTimeout(function a(){
-        video.src;
-    switch(video.src){
-        case play[1] : video.src='https://youtube.com/onepiece/';break;
+let ref=[];
+let player = document.querySelector('iframe');
+
+
+
+
+
+
+
+
+
+
+function processamento(referencia){
+    if(ref.length!=0){
+        localStorage.setItem('ref',ref);
+        window.open('html/iframeplayer.html');
+        const refFinal = localStorage.getItem('ref')
+        location.reload();
     }
-},3000);
-}*/
+}
+
+
+
+
+
+
+
+
+
+
+function episodio(){
+    if(localStorage.getItem('ref')==1){
+        player.src='D:/chainsawman ep1.mp4';
+        localStorage.removeItem('ref');
+    }
+    else if(localStorage.getItem('ref')==2){
+        player.src='D:/chainsawman ep2.mp4';
+        localStorage.removeItem('ref');
+    }
+    else if(localStorage.getItem('ref')==3){
+        player.src='D:/chainsawman ep3.mp4';
+        localStorage.removeItem('ref');
+    }
+    else if(localStorage.getItem('ref')==4){
+        player.src='D:/chainsawman ep4.mp4';
+        localStorage.removeItem('ref');
+    }
+    else if(localStorage.getItem('ref')==5){
+        player.src='D:/chainsawman ep5.mp4';
+        localStorage.removeItem('ref');
+    }
+    else if(localStorage.getItem('ref')==6){
+        player.src='D:/chainsawman ep6.mp4';
+        localStorage.removeItem('ref');
+    }
+    //so ir adicionando as condições para que seja carregado o episodio
+}
 
