@@ -53,6 +53,18 @@ function episodio(){
         player.src='D:/chainsawman ep6.mp4';
         localStorage.removeItem('ref');
     }
+    else if(localStorage.getItem('ref')==7){
+        player.src='D:/chainsawman ep7.mp4';
+        localStorage.removeItem('ref');
+    }
+    else if(localStorage.getItem('ref')==8){
+        player.src='D:/chainsawman ep8.mp4';
+        localStorage.removeItem('ref');
+    }
+    else if(localStorage.getItem('ref')==9){
+        player.src='D:/chainsawman ep9.mp4';
+        localStorage.removeItem('ref');
+    }
     //so ir adicionando as condições para que seja carregado o episodio
 }
 
