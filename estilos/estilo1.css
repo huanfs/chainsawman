@@ -1,0 +1,93 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+body{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:fantasy;
+    background-image:url("../img/bg1.jpg");
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+}
+main{
+    width:1000px;
+    height:520px;
+    display:flex;
+    align-items:center;
+}
+img{
+    width: 800px;
+    height:520px;
+    z-index:2;
+    /* animation-name:wallpapper; */
+    animation-iteration-count:1;
+    animation-duration:1s;
+    animation-timing-function:ease-in-out;
+    animation-delay:0.5s;
+    transition:0.5s;
+}
+aside{
+    height:520px;
+    width:200px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:1em;
+    background-color:rgba(253, 249, 2, 0.932);
+    box-shadow:inset 5px 0 5px #df5c5cbd;
+    border-radius:0 10px 10px 0;
+    transition:0.5s;
+    z-index:1;
+}
+aside p{
+    color:#0e0f0f;
+}
+aside button{
+    width:160px;
+    height:30px;
+    color:#fff;
+    background-color:rgba(247, 5, 5, 0.918);
+    border:1px solid #ffee02;
+    cursor:not-allowed;
+}
+button:first-child{
+    background-image:linear-gradient(to right, #33ff00, #02fc2c);
+    cursor:pointer;
+}
+@keyframes wallpapper{
+    0%{
+        opacity:1;
+}
+    50%{
+            opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    main{
+        flex-direction:column;
+    }
+    img{
+        width:350px;
+        height:350px;
+    }
+    aside{
+        width:350px;
+        height:200px;
+        border-radius:0;
+        box-shadow:none;
+        border-radius:0px 0px 10px 10px;
+    }
+    aside p{
+        font:normaL 0.8em Arial;
+    }
+}
