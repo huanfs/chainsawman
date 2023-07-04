@@ -14,35 +14,26 @@
             background-image:url('../img/bg3.jpg');
             background-size:cover;
         }
-        iframe{
-            width:720px;
-            height:480px;
-            border:none;
-            border-radius:5px;
-            box-shadow:3px 3px 15px black;
-        }
-        @media screen and (max-width:500px){
-            body{
-                background-image:url('../img/bg4.jpg');
-                background-size:cover;
-            }
-            iframe{
-            width:420px;
-            height:300px;
-            border:none;
-            border-radius:5px;
-            box-shadow:3px 3px 15px black;
-        }  
+        video{
+            box-shadow:5px 5px 10px #000;
+            border-radius:10px;
+            background-image:url("../img/error.jpg");
+            background-position:center center;
+            background-size:100% 100%;
+            background-repeat:no-repeat;
         }
     </style>
 </head>
-<body>
-    <iframe onload="Carregamento()"
+<body onload="Carregamento()">
+    <!-- <iframe onload="Carregamento()"
     src="../img/error.jpg" 
     title="Video Player" frameborder="0" 
     allow=autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture
     allowfullscreen>
-    </iframe>
+    </iframe> -->
+    <video id="video" width="520" height="440" muted="false" autoplay="true" controls>
+        <source src="" type="video/mp4">
+      </video>
 
     <script src="../script/script.js"></script>
 </body>

@@ -8,51 +8,51 @@ for(let i of ep){
 function Processamento(key){
 let arr = [];
 arr.push(key.target.alt);
-if(arr.includes('episodio 01')){
+if(arr.includes('episodio01')){
     localStorage.setItem("ep",arr[0]);
     window.open("html/iframeplayer.html","blank");
 }
-else if(arr.includes('episodio 02')){
+else if(arr.includes('episodio02')){
     localStorage.setItem("ep",arr[0]);
     window.open("html/iframeplayer.html","blank");
 }
-else if(arr.includes('episodio 03')){
+else if(arr.includes('episodio03')){
     localStorage.setItem("ep",arr[0]);
     window.open("html/iframeplayer.html","blank");
 }
-else if(arr.includes('episodio 04')){
+else if(arr.includes('episodio04')){
     localStorage.setItem("ep",arr[0]);
     window.open("html/iframeplayer.html","blank");
 }
-else if(arr.includes('episodio 05')){
+else if(arr.includes('episodio05')){
     localStorage.setItem("ep",arr[0]);
     window.open("html/iframeplayer.html","blank");
 }
-else if(arr.includes('episodio 06')){
+else if(arr.includes('episodio06')){
     localStorage.setItem("ep",arr[0]);
     window.open("html/iframeplayer.html","blank");
 }
-else if(arr.includes('episodio 07')){
+else if(arr.includes('episodio07')){
     localStorage.setItem("ep",arr[0]);
     window.open("html/iframeplayer.html","blank");
 }
-else if(arr.includes('episodio 08')){
+else if(arr.includes('episodio08')){
     localStorage.setItem("ep",arr[0]);
     window.open("html/iframeplayer.html","blank");
 }
-else if(arr.includes('episodio 09')){
+else if(arr.includes('episodio09')){
     localStorage.setItem("ep",arr[0]);
     window.open("html/iframeplayer.html","blank");
 }
-else if(arr.includes('episodio 10')){
+else if(arr.includes('episodio10')){
     localStorage.setItem("ep",arr[0]);
     window.open("html/iframeplayer.html","blank");
 }
-else if(arr.includes('episodio 11')){
+else if(arr.includes('episodio11')){
     localStorage.setItem("ep",arr[0]);
     window.open("html/iframeplayer.html","blank");
 }
-else if(arr.includes('episodio 12')){
+else if(arr.includes('episodio12')){
     localStorage.setItem("ep",arr[0]);
     window.open("html/iframeplayer.html","blank");
 }
@@ -61,9 +61,8 @@ else if(arr.includes('episodio 12')){
 
 function Carregamento(){
     let num = localStorage.getItem("ep");
-    let player = document.querySelector("iframe");
-    player.src="https://youtube.com/q761572";//atribuir os SRC de cada episodio
-    //que será o valor obtido de local storage ex:"nome do episodio + local storage + mp4";
+    let video = document.getElementById("video");
+    video.src=`file://D:/chainsawman_${num}.mp4`;
 }
 
 
