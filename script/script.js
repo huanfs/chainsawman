@@ -73,7 +73,7 @@ function log(){
         register.style.marginLeft="-200px";
         wallpapper.style.marginLeft="100px";
         setTimeout(x=>{
-            wallpapper.src="D:/denji2.jpg";
+            wallpapper.src="./img/wp2.jpg";
             window.open("./html/app.html");
         },1000);  
     }
@@ -81,12 +81,11 @@ function log(){
         register.style.marginTop="-250px";
         wallpapper.style.marginTop="100px";
         setTimeout(x=>{
-            wallpapper.src="D:/denji2.jpg";
+            wallpapper.src="./img/wp2.jpg";
             window.open("./html/app.html");
         },1000);
     }
 }
-
 function exit(){
     window.close();
 }
@@ -97,12 +96,11 @@ function foco(){
     if(wid>600){
         wallpapper.style.marginLeft="0px";
         register.style.marginLeft="0px";
-        register.style.opacity="1";
-        wallpapper.src="D:/denji4.jpg"
+        wallpapper.src="./img/wp1.jpg";
     }
     else if(wid<=600){
         wallpapper.style.marginTop="0px";
         register.style.marginTop="0px";
-        wallpapper.src="D:/denji4.jpg"
+        wallpapper.src="./img/wp1.jpg";
     }
 }
