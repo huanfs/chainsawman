@@ -59,6 +59,15 @@ button:first-child{
     background-image:linear-gradient(to right, #33ff00, #02fc2c);
     cursor:pointer;
 }
+#arrow{
+    width:40px;
+    height:40px;
+    padding:5px;
+    border-radius:0 10px 10px 0;
+    background-color:rgba(242, 247, 242, 0.178);
+    cursor:pointer;
+    display:none;
+}
 @keyframes wallpapper{
     0%{
         opacity:1;
@@ -83,11 +92,20 @@ button:first-child{
     aside{
         width:350px;
         height:200px;
+        gap:0.4em;
         border-radius:0;
         box-shadow:none;
         border-radius:0px 0px 10px 10px;
     }
     aside p{
         font:normaL 0.8em Arial;
+    }
+    #arrow{
+        width:30px;
+        height:30px;
+        padding:5px;
+        border-radius:0 0 10px 10px;
+        background-color:rgba(242, 247, 242, 0.178);
+        display:none;
     }
 }
