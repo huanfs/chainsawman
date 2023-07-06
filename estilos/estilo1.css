@@ -53,7 +53,17 @@ aside button{
     color:#fff;
     background-color:rgba(247, 5, 5, 0.918);
     border:1px solid #ffee02;
-    cursor:not-allowed;
+    cursor:pointer;
+}
+aside input{
+    width:70%;
+    height:40px;
+    text-align:center;
+    font:normal 1.3em Arial;
+    border:2px solid rgb(247, 225, 26);
+    outline:0;
+    border-radius:5px;
+    cursor:pointer;
 }
 button:first-child{
     background-image:linear-gradient(to right, #33ff00, #02fc2c);
@@ -79,8 +89,6 @@ button:first-child{
         opacity:1;
     }
 }
-
-
 @media screen and (max-width:600px){
     main{
         flex-direction:column;
@@ -92,7 +100,8 @@ button:first-child{
     aside{
         width:350px;
         height:200px;
-        gap:0.4em;
+        padding:33px 0;
+        gap:0.2em;
         border-radius:0;
         box-shadow:none;
         border-radius:0px 0px 10px 10px;

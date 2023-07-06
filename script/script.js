@@ -114,4 +114,36 @@ function show(){
 function exit(){
     window.close();
 }
-//criar uma função de papel de parede dinamico
+//CRIAR A FUNÇÃO DE ENTRAR E REGISTRAR
+function enterOrRegister(){
+    let enter = document.querySelectorAll("article button")[0];
+    let register = document.querySelectorAll("article button")[1];
+    enter.addEventListener("click", signIn);
+    // register.addEventListener("click", Register);
+    //*****FUNÇÃO DE ENTRAR QUE CRIA TODOS OS CAMPOS DA ABA ENTRAR
+    function signIn(){
+        let field = document.querySelector("aside");
+        while(field.firstChild){
+            field.removeChild(field.firstChild);
+        }
+        let user = document.createElement("input");
+        user.setAttribute("placeholder","insira seu usuário");
+        user.type="text";
+        let password = document.createElement("input");
+        password.setAttribute("placeholder","insira sua senha");
+        password.type="password";
+        let entrar = document.createElement("input");
+        entrar.type="button";
+        entrar.value="entrar";
+        entrar.style.backgroundColor="#ff0202d7";
+        entrar.style.color="#fff";
+        //entrar.addEventListener("click", enter);
+        field.style.gap="1em";
+        field.appendChild(user);
+        field.appendChild(password);
+        field.appendChild(entrar);
+        //function enter(){
+            //VERIFICA A SENHA SALVA EM LOCAL STORAGE/ SE TIVER ENTRA SENÃO REGISTRE-SE
+        //}
+    }
+}
