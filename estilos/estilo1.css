@@ -56,7 +56,7 @@ aside button{
     cursor:pointer;
 }
 aside input{
-    width:70%;
+    width:92%;
     height:40px;
     text-align:center;
     font:normal 1.3em Arial;
@@ -108,6 +108,9 @@ button:first-child{
     }
     aside p{
         font:normaL 0.8em Arial;
+    }
+    aside input{
+        width:70%;
     }
     #arrow{
         width:30px;

@@ -2,6 +2,8 @@
 let ep = document.querySelectorAll("article");
 //*****VARIÁVEL QUE ARMAZENA A LARGURA DA TELA******
 let wid = window.innerWidth;
+//*****ONDE AS INFORMAÇÕES DE USUÁRIO SÃO GRAVADAS******
+let usuario = [];
 //*****LAÇO DE REPETIÇÃO QUE APLICA O EVENTO CLICK A TODOS OS EP(ARTICLE);
 for(let i of ep){
     i.addEventListener("click", Processamento);
@@ -119,7 +121,7 @@ function enterOrRegister(){
     let enter = document.querySelectorAll("article button")[0];
     let register = document.querySelectorAll("article button")[1];
     enter.addEventListener("click", signIn);
-    // register.addEventListener("click", Register);
+    register.addEventListener("click", Register);
     //*****FUNÇÃO DE ENTRAR QUE CRIA TODOS OS CAMPOS DA ABA ENTRAR
     function signIn(){
         let field = document.querySelector("aside");
@@ -137,13 +139,67 @@ function enterOrRegister(){
         entrar.value="entrar";
         entrar.style.backgroundColor="#ff0202d7";
         entrar.style.color="#fff";
-        //entrar.addEventListener("click", enter);
+        entrar.addEventListener("click", enter);
         field.style.gap="1em";
         field.appendChild(user);
         field.appendChild(password);
         field.appendChild(entrar);
-        //function enter(){
-            //VERIFICA A SENHA SALVA EM LOCAL STORAGE/ SE TIVER ENTRA SENÃO REGISTRE-SE
-        //}
+        //FUNÇÃO QUE VALIDA A ENTRADA, CHECANDO SE USUARIO E SENHA FORAM PREVIAMENTE SALVOS EM LOCAL STORAGE
+        function enter(){
+            let user = document.querySelectorAll("input")[0];
+            let password = document.querySelectorAll("input")[1];
+            let credenciais = localStorage.getItem("usuario");
+            if(user.value!=credenciais[0]||password.value!=credenciais[1]){
+                user.value='';
+                password.value='';
+                if(confirm("usuário não encontrado! deseja registrar-se?")){
+                    Register();
+                }else{
+                    location.reload();
+                }
+            }
+            else if(user.value==credenciais[0]&&password.value==credenciais[1]){
+                log();
+            }
+        }
+    }
+    //FUNÇÃO REGISTRAR QUE CRIA TODOS OS CAMPOS DA ÁREA REGISTRAR
+    function Register(){
+        let field = document.querySelector("aside");
+        while(field.firstChild){
+            field.removeChild(field.firstChild);
+        }
+        let user = document.createElement("input");
+        user.setAttribute("placeholder","insira seu usuário");
+        user.type="text";
+        let password = document.createElement("input");
+        password.setAttribute("placeholder","insira sua senha");
+        password.type="text";
+        let confirmPassword = document.createElement("input");
+        confirmPassword.setAttribute("placeholder","confirme sua senha");
+        confirmPassword.type="text";
+        let registrar = document.createElement("input");
+        registrar.type="button";
+        registrar.value="registrar";
+        registrar.style.backgroundColor="#ff0202d7";
+        registrar.style.color="#fff";
+        registrar.addEventListener("click", register);
+        field.style.gap="1em";
+        field.appendChild(user);
+        field.appendChild(password);
+        field.appendChild(confirmPassword);
+        field.appendChild(registrar);
+        //ADICIONAR A FUNÇÃO QUE VERIFICA A ENTRADA DE DADOS DE REGISTRO SE FOREM VALIDOS
+        //LOCAL STORAGE ESTÁ SALVANDO OS DADOS EM FORMA DE STRING POR EXTENSO
+        //AO ACESSAR USUARIO[0] RETORNA A PRIMEIRA LETRA. TENHO QUE CORRIGIR ISTO
+        //FUNÇÃO DE REGISTRAR QUE SALVA USUARIO E SENHA EM LOCAL STORAGE
+        function register(){
+            let userId = document.querySelectorAll("input")[0].value;
+            let userPassword = document.querySelectorAll("input")[2].value;
+            usuario.push(userId);
+            usuario.push(userPassword);
+            localStorage.setItem("usuario",usuario);
+            log();
+        }
     }
 }
