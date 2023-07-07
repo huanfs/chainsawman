@@ -65,7 +65,8 @@ else if(arr.includes('episodio12')){
 function Carregamento(){
     let num = localStorage.getItem("ep");
     let video = document.getElementById("video");
-    video.src=`file://D:/chainsawman_${num}.mp4`;
+    // video.src=`file://D:/chainsawman_${num}.mp4`;
+    video.src=`http://localhost/vid/chainsawman_${num}.mp4`;//ACESSO A LOCAL HOST
 }
 //******FUNÇÃO ATIVADA NO BOTÃO "ENTRAR COMO CONVIDADO" QUE ESCONDE A ÁREA DE LOGIN E ABRE APP.HTML*****
 function log(){
