@@ -117,7 +117,7 @@ function show(){
 function exit(){
     window.close();
 }
-//CRIAR A FUNÇÃO DE ENTRAR E REGISTRAR
+//*****FUNÇÃO QUE CONTEM AS FUNÇÕES DE ENTRAR OU REGISTRAR*****
 function enterOrRegister(){
     let enter = document.querySelectorAll("article button")[0];
     let register = document.querySelectorAll("article button")[1];
@@ -145,7 +145,7 @@ function enterOrRegister(){
         field.appendChild(user);
         field.appendChild(password);
         field.appendChild(entrar);
-        //FUNÇÃO QUE VALIDA A ENTRADA, CHECANDO SE USUARIO E SENHA FORAM PREVIAMENTE SALVOS EM LOCAL STORAGE
+        //*****FUNÇÃO QUE VALIDA A ENTRADA, CHECANDO SE USUARIO E SENHA FORAM PREVIAMENTE SALVOS EM LOCAL STORAGE*****
         function enter(){
             let user = document.querySelectorAll("input")[0];
             let password = document.querySelectorAll("input")[1];
@@ -164,7 +164,7 @@ function enterOrRegister(){
             }
         }
     }
-    //FUNÇÃO REGISTRAR QUE CRIA TODOS OS CAMPOS DA ÁREA REGISTRAR
+    //*****FUNÇÃO REGISTRAR QUE CRIA TODOS OS CAMPOS DA ÁREA REGISTRAR*****
     function Register(){
         let field = document.querySelector("aside");
         while(field.firstChild){
@@ -173,24 +173,26 @@ function enterOrRegister(){
         let user = document.createElement("input");
         user.setAttribute("placeholder","insira seu usuário");
         user.type="text";
+        user.id="user";
         let password = document.createElement("input");
         password.setAttribute("placeholder","insira sua senha");
         password.type="text";
+        password.id="password";
         let confirmPassword = document.createElement("input");
         confirmPassword.setAttribute("placeholder","confirme sua senha");
         confirmPassword.type="text";
+        confirmPassword.id="cPassword";
         let registrar = document.createElement("input");
         registrar.type="button";
         registrar.value="registrar";
         registrar.style.backgroundColor="#ff0202d7";
         registrar.style.color="#fff";
-        registrar.addEventListener("click", register);
+        registrar.addEventListener("click", passwordCheck);
         field.style.gap="1em";
         field.appendChild(user);
         field.appendChild(password);
         field.appendChild(confirmPassword);
         field.appendChild(registrar);
-        //ADICIONAR A FUNÇÃO QUE VERIFICA A ENTRADA DE DADOS DE REGISTRO SE FOREM VALIDOS
         //LOCAL STORAGE ESTÁ SALVANDO OS DADOS EM FORMA DE STRING POR EXTENSO
         //AO ACESSAR USUARIO[0] RETORNA A PRIMEIRA LETRA. TENHO QUE CORRIGIR ISTO
         //FUNÇÃO DE REGISTRAR QUE SALVA USUARIO E SENHA EM LOCAL STORAGE
@@ -202,5 +204,29 @@ function enterOrRegister(){
             localStorage.setItem("usuario",usuario);
             log();
         }
+        //*****FUNÇÃO QUE CHECA OS DADOS INSERIDOS NO REGISTRO*****
+        function passwordCheck(){
+        if(user.value.length<6){
+            alert("O usuário deve ter no mínimo, 6 caracteres");
+            user.style.border="2px solid red";
+            user.value='';
+        }
+        if(password.value.length<7){
+            alert("Sua senha deve ter no mínimo 8 caracteres");
+            password.style.border="2px solid red";
+            password.value='';
+        }
+        if(password.value!=confirmPassword.value){
+            alert("As senhas não estão iguais");
+            password.style.border="2px solid red";
+            confirmPassword.style.border="2px solid red";
+            password.value='';
+            confirmPassword.value='';
+        }
+        else if(user.value.length>=6&&password.value==confirmPassword.value){
+            register();
+        }
     }
+    }
+    
 }
