@@ -23,12 +23,10 @@ img{
     width: 800px;
     height:520px;
     z-index:2;
-    /* animation-name:wallpapper; */
     animation-iteration-count:1;
     animation-duration:1s;
     animation-timing-function:ease-in-out;
-    animation-delay:0.5s;
-    transition:0.5s;
+    transition:0.3s;
 }
 aside{
     height:520px;
@@ -41,7 +39,7 @@ aside{
     background-color:rgba(253, 249, 2, 0.932);
     box-shadow:inset 5px 0 5px #df5c5cbd;
     border-radius:0 10px 10px 0;
-    transition:0.5s;
+    transition:0.3s;
     z-index:1;
 }
 aside p{
@@ -99,9 +97,8 @@ button:first-child{
     }
     aside{
         width:350px;
-        height:200px;
         padding:33px 0;
-        gap:0.2em;
+        gap:0.5em;
         border-radius:0;
         box-shadow:none;
         border-radius:0px 0px 10px 10px;
