@@ -97,6 +97,7 @@ button:first-child{
     }
     aside{
         width:350px;
+        height:200px;
         padding:33px 0;
         gap:0.5em;
         border-radius:0;
