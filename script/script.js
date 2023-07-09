@@ -196,6 +196,8 @@ function enterOrRegister(){
         //LOCAL STORAGE ESTÁ SALVANDO OS DADOS EM FORMA DE STRING POR EXTENSO
         //AO ACESSAR USUARIO[0] RETORNA A PRIMEIRA LETRA. TENHO QUE CORRIGIR ISTO
         //FUNÇÃO DE REGISTRAR QUE SALVA USUARIO E SENHA EM LOCAL STORAGE
+        //PRECISO USAR JSON.parse() para converter uma string json em objeto e 
+        //assim recuperar os valores pra fazer a checagem da função logar
         function register(){
             let userId = document.querySelectorAll("input")[0].value;
             let userPassword = document.querySelectorAll("input")[2].value;
