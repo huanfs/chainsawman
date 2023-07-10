@@ -154,13 +154,8 @@ footer{
     text-decoration:none;
 }
 /*style da tag video*/
-video{
-    box-shadow:5px 5px 10px #000;
-    border-radius:10px;
-    background-image:url("../img/error.jpg");
-    background-position:center center;
-    background-size:100% 100%;
-    background-repeat:no-repeat;
+#video{
+    box-shadow:5px 5px 10px black;
 }
 /*fim estilização da tag video*/
 /*estilização login*/
@@ -218,6 +213,11 @@ video{
     aside h2{
         text-decoration:none;
         color:rgb(255, 255, 44);
+    }
+    #video{
+        height:310px;
+        width:320px;
+        border-radius:10px;
     }
     footer{
         text-align:center;
