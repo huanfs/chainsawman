@@ -1,138 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta name="author" content="Huan Figuereido">
     <meta charset="UTF-8">
+    <meta name="author" content="Huan Figuereido">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chainsawman</title>
-    <link rel="stylesheet" type="text/css" href="estilos/estilo.css">
+    <title>Login Chainsawman</title>
+    <link rel="stylesheet" type="text/css" href="estilos/estilo1.css">
 </head>
-<body>
-    <!--NAVEGAÇÃO-->
-    <nav>
-        <a href="#"><img src="img/logo.png"></a>
-        <a  id="btn" href="#">SOBRE</a>
-    </nav>
-    <!--EPISODIO-->
-    <section>
-        <article>
-        <a class="play" onclick="ref.push(1);processamento()">
-            <div class="img">
-                <img src="epthumb/01.png">
-                <p>EP01</p>
-            </div></a>
-        </article>
-        <article>
-            <a class="play" onclick="ref.push(2);processamento()">
-            <div class="img">
-                <img src="epthumb/02.png">
-                <p>EP02</p>
-            </div></a>
-        </article>
-        <article>
-            <a class="play" onclick="ref.push(3);processamento()">
-            <div class="img">
-                 <img src="epthumb/03.png">
-                 <p>EP03</p>
-            </div></a>
-        </article>
-        <article>
-            <a class="play" onclick="ref.push(4);processamento()">
-            <div class="img">
-                 <img src="epthumb/04.png">
-                 <p>EP04</p>
-            </div></a>
-        </article>
-        <article>
-            <a class="play" onclick="ref.push(5);processamento()">
-                <div class="img">
-                     <img src="epthumb/05.png">
-                     <p>EP05</p>
-                </div></a>
-        </article>
-        <article>
-                <a class="play" onclick="ref.push(6);processamento()">
-                    <div class="img">
-                         <img src="epthumb/06.png">
-                         <p>EP06</p>
-                    </div></a>
-        </article>
-        <article>
-            <a class="play" onclick="ref.push(7);processamento()">
-                <div class="img">
-                     <img src="epthumb/07.png">
-                     <p>EP07</p>
-                </div></a>
-        </article>
-        <article>
-            <a class="play" onclick="ref.push(8);processamento()">
-                <div class="img">
-                     <img src="epthumb/08.png">
-                     <p>EP08</p>
-                </div></a>
-            </div></a>
-        </article>
-        <article>
-            <a class="play" onclick="ref.push(9);processamento()">
-                <div class="img">
-                     <img src="epthumb/09.png">
-                     <p>EP09</p>
-                </div></a>
-            </div></a>
-        </article> 
-        <article>
-            <div class="img">
-                <a class="play" onclick="ref.push(10);processamento()">
-                    <div class="img">
-                         <img src="epthumb/10.png">
-                         <p>EP10</p>
-                    </div></a>
-            </div></a>
-        </article>
-        <article>
-            <div class="img">
-                <a class="play" onclick="ref.push(11);processamento()">
-                    <div class="img">
-                         <img src="epthumb/11.png">
-                         <p>EP11</p>
-                    </div></a>
-            </div></a>
-        </article>
-        <article>
-            <div class="img">
-                <a class="play" onclick="ref.push(12);processamento()">
-                    <div class="img">
-                         <img src="epthumb/12.png">
-                         <p>EP12</p>
-                    </div></a>
-            </div></a>
-        </article>
-    </section>
-    <!--SINOPSE-->
-    <aside>
-        <h2>Sinopse</h2>
-        <p> 
-            “Denji é um adolescente que vive com um Demônio Motosserra chamado Pochita.
-             Devido à dívida que seu pai deixou para trás, ele está vivendo uma vida no 
-             fundo do poço enquanto paga sua dívida colhendo cadáveres de demônios com 
-             Pochita. Um dia, Denji é traído e Como sua consciência desaparece, ele faz 
-             um contrato com Pochita e é revivido como “Chainsaw Man” – um homem com um 
-             coração de diabo.”
-        </p>
-        
-        <ol>
-            <li><span>Gênero:</span> Ação, Fantasia, Demônios</li>
-            <li><span>Estúdio:</span> MAPPA</li>
-            <li><span>Estréia:</span> 11 de Outubro</li>
-            <li><span>Criador:</span> Tatsuki Fujimoto</li>
-        </ol>
-    </aside>
-    <!--INFERIOR-->
-    <footer>
-        Aplicação criada por &copy;Ruan Figuereido. para fins de estudo
-        das tecnologias HTML5,CSS3,JS e GIT!
-    </footer>
-
-    <script src="script/script.js"></script>
+<body onload="enterOrRegister()">
+    <main>
+        <!--PAPEL DE PAREDE DINÂMICO-->
+        <img src="img/wp1.jpg" alt="Denji wallpapper">
+        <!--ÁREA DE LOGIN-->
+        <aside>
+            <article>
+                <p>Já tem uma conta?</p>
+                <button type="button">Logar</button>
+            </article>
+            <article>
+                <p>Novo por aqui?</p>
+                <button type="button">Registre-se</button>
+            </article>
+            <article>
+                <button type="button" onclick="log()">Entrar como convidado</button>
+            </article>
+        </aside>
+        <!--FIM ÁREA DE LOGIN-->
+        <!--SETA-->
+        <img id="arrow" src="" alt="arrow">
+    </main>
+    <script type="text/javascript" src="script/script.js"></script>
 </body>
 </html>

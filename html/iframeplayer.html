@@ -2,8 +2,9 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Huan Figuereido">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../estilos/estilo.css">
     <title>Iframe</title>
     <style>
         body{
@@ -14,35 +15,12 @@
             background-image:url('../img/bg3.jpg');
             background-size:cover;
         }
-        iframe{
-            width:720px;
-            height:480px;
-            border:none;
-            border-radius:5px;
-            box-shadow:3px 3px 15px black;
-        }
-        @media screen and (max-width:500px){
-            body{
-                background-image:url('../img/bg4.jpg');
-                background-size:cover;
-            }
-            iframe{
-            width:420px;
-            height:300px;
-            border:none;
-            border-radius:5px;
-            box-shadow:3px 3px 15px black;
-        }  
-        }
     </style>
 </head>
-<body>
-    <iframe onload="episodio()"
-    src="../img/error.jpg" 
-    title="Video Player" frameborder="0" 
-    allow=autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture
-    allowfullscreen>
-    </iframe>
+<body onload="Carregamento()">
+    <video id="video" width="520" height="440" muted="false" autoplay="true" controls>
+        <source src="" type="video/mp4">
+      </video>
 
     <script src="../script/script.js"></script>
 </body>
