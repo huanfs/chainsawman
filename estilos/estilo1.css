@@ -64,8 +64,16 @@ aside input{
     cursor:pointer;
 }
 button:first-child{
-    background-image:linear-gradient(to right, #33ff00, #02fc2c);
+    border:2px solid rgba(247, 5, 5, 0.918);
+    border-radius:5px;
+    color:rgba(247, 5, 5, 0.918);
+    background:transparent;
     cursor:pointer;
+}
+button:first-child:hover{
+    background-color:rgb(245, 5, 5);
+    color:#fff;
+    transition:0.5s;
 }
 #arrow{
     width:40px;
