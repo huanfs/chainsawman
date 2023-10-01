@@ -84,6 +84,11 @@ button:first-child:hover{
     cursor:pointer;
     display:none;
 }
+.animate{
+    animation-name:enter;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+}
 @keyframes wallpapper{
     0%{
         opacity:1;
@@ -93,6 +98,21 @@ button:first-child:hover{
     }
     100%{
         opacity:1;
+    }
+}
+@keyframes enter{
+    0%{
+        background-color:rgba(255, 0, 0, 0.943);
+        color:rgba(255, 255, 0, 0.943);
+    }
+    50%{
+        background-color:rgba(255, 255, 0, 0.943);
+        color:rgba(255, 0, 0, 0.943);
+        border-color:rgba(255, 0, 0, 0.943);
+    }
+    100%{
+        background-color:rgba(255, 0, 0, 0.943);
+        color:rgba(255, 255, 0, 0.943);
     }
 }
 @media screen and (max-width:600px){
