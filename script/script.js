@@ -63,8 +63,8 @@ else if(arr.includes('episodio12')){
 function Carregamento(){
     let num = localStorage.getItem("ep");
     let video = document.getElementById("video");
-    // video.src=`file://D:/chainsawman_${num}.mp4`; //ACESSO LOCAL DIRETO
-    video.src=`http://localhost/vid/chainsawman_${num}.mp4`;//ACESSO A LOCAL HOST
+    video.src=`file://C:/chainsawman/${num}.mp4`; //ACESSO LOCAL DIRETO
+    // video.src=`http://localhost/vid/chainsawman_${num}.mp4`;//ACESSO A LOCAL HOST
 }
 //******FUNÇÃO ATIVADA NO BOTÃO "ENTRAR COMO CONVIDADO" QUE ESCONDE A ÁREA DE LOGIN E ABRE APP.HTML*****
 function log(){
@@ -77,7 +77,7 @@ function log(){
         wallpapper.style.marginLeft="100px";
         arrow.src="./img/arrow-right.png";
         setTimeout(x=>{
-            wallpapper.src="./img/wp2.jpg";
+            wallpapper.src="./img/1.jpg";
             window.open("./html/app.html");
             arrow.style.display="block";
         },1000);  
@@ -87,7 +87,7 @@ function log(){
         wallpapper.style.marginTop="100px";
         arrow.src="./img/arrow-down.png";
         setTimeout(x=>{
-            wallpapper.src="./img/wp2.jpg";
+            wallpapper.src="./img/2.jpg";
             window.open("./html/app.html");
             arrow.style.display="block";
         },1000);
@@ -130,9 +130,11 @@ function enterOrRegister(){
         let user = document.createElement("input");
             user.setAttribute("placeholder","insira seu usuário");
                 user.type="text";
+                    localStorage.getItem("userName")!=null?user.value=localStorage.userName:user.value=""
         let password = document.createElement("input");
             password.setAttribute("placeholder","insira sua senha");
                 password.type="password";
+                localStorage.getItem("userPassword")!=null?password.value=localStorage.userPassword:password.value=""
         let entrar = document.createElement("input");
             entrar.type="button";
                 entrar.value="entrar";
@@ -223,4 +225,14 @@ function enterOrRegister(){
         }
     }
     }  
+}
+//*****SE POSSUIR CREDENCIAL, BOTÃO ENTRAR FICA PISCANDO******
+function User(){
+    let btnEnter = document.querySelectorAll("article button")[0];
+    if(localStorage.getItem("userName")!=null&&localStorage.getItem("userPassword")!=null){
+        btnEnter.className="animate";
+    }
+    else{
+        btnEnter.className="";
+    }
 }
