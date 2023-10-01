@@ -102,6 +102,7 @@ function show(){
             register.style.marginLeft="0";
             wallpapper.style.marginLeft="0";
             arrow.style.display="none";
+            wallpapper.src="./img/1.jpg";
     }
     else if(wid<=600&&arrow.style.display=="block"){
         let wallpapper = document.querySelectorAll("img")[0];
@@ -109,6 +110,7 @@ function show(){
             register.style.marginTop="0";
             wallpapper.style.marginTop="0";
             arrow.style.display="none";
+            wallpapper.src="./img/1.jpg"
     }
 }
 //*****FUNÇÃO QUE SAI DE APP.HTML E VOLTA PARA INDEX.HTML*****
