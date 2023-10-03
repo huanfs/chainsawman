@@ -3,6 +3,14 @@
     margin:0;
     padding:0;
 }
+@keyframes fade{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
 body{
     display:grid;
     grid-template-areas:"top top" "left right" "bot bot";
@@ -10,6 +18,8 @@ body{
     grid-template-rows:11vh 79vh 10vh;
     background-image:url('../img/bg1.jpg');
     background-size:cover;
+    animation-name:fade;
+    animation-duration:1s;
 }
 nav{
     position:sticky;
